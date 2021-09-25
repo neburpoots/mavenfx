@@ -54,7 +54,7 @@ public class App extends Application {
         Label amountlbl = new Label("Amount due: ");
         gridPane.add(amountlbl, 0,5);
 
-        Label amountLblInput = new Label("");
+        Label amountLblInput = new Label("test");
         gridPane.add(amountLblInput, 1,5);
 
         calculatePayment.setOnAction(new EventHandler<ActionEvent>() {
@@ -74,8 +74,8 @@ public class App extends Application {
                     numLiters = Integer.getInteger(numLitersTxt.getText());
                     price += numLiters * 2;
                 }
-
-                //amountLblInput.setText();
+                String result = String.format("%.2f", price);
+                amountLblInput.setText(result);
             }
         });
 
